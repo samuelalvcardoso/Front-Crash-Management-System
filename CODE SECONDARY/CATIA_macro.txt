@@ -1,0 +1,181 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Set documents1 = CATIA.Documents
+
+Set partDocument1 = documents1.Open("C:\\Users\\samue\\Desktop\\Two_Structures\\Bumper_two_double.CATPart")
+
+Set part1 = partDocument1.Part
+
+Set parameters1 = part1.Parameters
+
+Set length1 = parameters1.Item("Front_Bumper")
+
+length1.Value = 630.000000
+
+Set parameters2 = part1.Parameters
+
+Set length2 = parameters2.Item("Real_Raio_Bumper")
+
+length2.Value = 6000.000000
+
+Set parameters3 = part1.Parameters
+
+Set length3 = parameters3.Item("Comprimento_bumper_total")
+
+length3.Value = 300.000000
+
+Set parameters4 = part1.Parameters
+
+Set length4 = parameters4.Item("Largura_Bumper")
+
+length4.Value = 40.000000
+
+Set parameters5 = part1.Parameters
+
+Set length5 = parameters5.Item("Part1\\Distance_Between_Crashes")
+
+length5.Value = 330.000000
+
+Set parameters6 = part1.Parameters
+
+Set length6 = parameters6.Item("Part1\\Altura_Crash")
+
+length6.Value = 40.000000
+
+Set parameters7 = part1.Parameters
+
+Set length7 = parameters7.Item("Part1\\Largura_Crash")
+
+length7.Value = 30.000000
+
+Set parameters8 = part1.Parameters
+
+Set length8 = parameters8.Item("Part1\\Altura_Bumper")
+
+length8.Value = 50.000000
+
+part1.Update 
+
+Set bodies1 = part1.Bodies
+
+Set body1 = bodies1.Item("PartBody")
+
+Set sketches1 = body1.Sketches
+
+Set sketch1 = sketches1.Item("Sketch.2")
+
+Set constraints1 = sketch1.Constraints
+
+Set constraint1 = constraints1.Item("Angle.10")
+
+constraint1.AngleSector = catCstAngleSector0
+
+Set angle1 = constraint1.Dimension
+
+angle1.Value = 30.000000
+
+Set constraint2 = constraints1.Item("Angle.14")
+
+constraint2.AngleSector = catCstAngleSector2
+
+Set angle2 = constraint2.Dimension
+
+angle2.Value = 120.000000
+
+Set constraint3 = constraints1.Item("Angle.16")
+
+constraint3.AngleSector = catCstAngleSector1
+
+Set angle3 = constraint3.Dimension
+
+angle3.Value = 120.000000
+
+Set constraint4 = constraints1.Item("Angle.18")
+
+constraint4.AngleSector = catCstAngleSector1
+
+Set angle4 = constraint4.Dimension
+
+angle4.Value = 120.000000
+
+Set constraint5 = constraints1.Item("Length.19")
+
+Set length9 = constraint5.Dimension
+
+length9.Value = 30.135200
+
+Set constraint6 = constraints1.Item("Length.22")
+
+Set length10 = constraint6.Dimension
+
+length10.Value = 30.153200
+
+Set constraint7 = constraints1.Item("Length.23")
+
+Set length11 = constraint7.Dimension
+
+length11.Value = 30.135200
+
+Set body2 = bodies1.Item("Body.1")
+
+Set shapes1 = body2.Shapes
+
+Set pad1 = shapes1.Item("Pad.3")
+
+Set sketch2 = pad1.Sketch
+
+Set constraints2 = sketch2.Constraints
+
+Set constraint8 = constraints2.Item("Angle.65")
+
+constraint8.AngleSector = catCstAngleSector3
+
+Set sketches2 = body2.Sketches
+
+Set sketch3 = sketches2.Item("Sketch.8")
+
+Set constraints3 = sketch3.Constraints
+
+Set constraint9 = constraints3.Item("Angle.172")
+
+constraint9.AngleSector = catCstAngleSector2
+
+Set angle5 = constraint9.Dimension
+
+angle5.Value = 120.000000
+
+Set constraint10 = constraints3.Item("Angle.175")
+
+constraint10.AngleSector = catCstAngleSector2
+
+Set angle6 = constraint10.Dimension
+
+angle6.Value = 120.000000
+
+Set constraint11 = constraints3.Item("Angle.177")
+
+constraint11.AngleSector = catCstAngleSector2
+
+Set angle7 = constraint11.Dimension
+
+angle7.Value = 120.000000
+
+Set constraint12 = constraints3.Item("Angle.179")
+
+constraint12.AngleSector = catCstAngleSector2
+
+Set angle8 = constraint12.Dimension
+
+angle8.Value = 120.000000
+
+Set partDocument1 = CATIA.ActiveDocument
+
+partDocument1.Save 
+
+Set partDocument1 = CATIA.ActiveDocument
+
+partDocument1.ExportData "C:\\Users\\samue\\Desktop\\Two_Structures\\Bumper_two_double.igs", "igs"
+
+End Sub

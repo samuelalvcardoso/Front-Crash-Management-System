@@ -1,0 +1,4 @@
+hwi GetSessionHandle session_handle 
+session_handle GetProjectHandle project_handle 
+session_handle LoadSessionFile  "C:/Users/samue/Desktop/Two_Structures/Simulation_6082T6_H_Val_S_12mm_tick_2.5_DimC_45_ComprimentoT_238_raio_9000_alturab_50_largura_b_25/session_modified.mvw" 
+session_handle ExportCurves "C:/Users/samue/Desktop/Two_Structures/Simulation_6082T6_H_Val_S_12mm_tick_2.5_DimC_45_ComprimentoT_238_raio_9000_alturab_50_largura_b_25/Export6082T6_H_Val_S_12mm_tick_2.5_DimC_45_ComprimentoT_238_raio_9000_alturab_50_largura_b_25.csv" "Excel" all 

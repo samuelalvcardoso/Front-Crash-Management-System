@@ -1,0 +1,24 @@
+As pastas CODE PRIMARY e CODE SECONDARY contêm os setups para o desenvolvimento da estrutura primária e secundária, respectivamente.
+
+%%%%%%%%%%%%%%%%
+Dentro destas pastas estão as macros:
+->CATIA_macro -> macro utilizada no CATIA 
+
+->hypermesh_macro_sold - commented.tcl -> serve de indicação das funções e tem o codigo comentado, não sendo usado pelo matlab
+
+->hypermesh_macro_sold.txt ->macro de hypermesh utilizada pelo MATLAB
+
+->hypergraph_macro_modified-> macro de hypergraph
+
+%%%%%%%%%%%%%%%%%%%%%%
+A pasta Criteria_and_Parameters serve para a definição do tamanho de malha pelos ficheiros .criteria e .param.
+%%%%%%%%%%%%%%%%%%%%%%
+
+Para correr o programa, basta aceder ao script MAIN do MATLAB. Caso ocorram erros, estes irão estar relacionados com os directórios deefinidos no script computeall. Deverá haver especial atenção na definição dos directórios certos dos ficheiros de malha e da geometria do CATIA.
+
+%%%%%%%%%%%%%%%%%%%%%%%
+O ficheiro de simulação na pasta Simulações corresponde à solução do veículo Big Sedan.
+
+Para correr o setup, deve ser importado o ficheiro Bumper_two_0000.rad para o Hyermesh e ser corrido posteriormente no RADIOSS.
+
+As soluções estão apresentadas nos ficheiros .jpeg ou então podem ser obtidos abrindo o ficheiro T01 no HyperGraph ou o último fichero A no HyperView.
