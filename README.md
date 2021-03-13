@@ -24,4 +24,4 @@ the crash events.
 This thesis was done with the intention of obtaining the Master of Science degree in Aerospace Engineering. 
 
 
-![plot](./Front-Crash-Management-System/Figure/EURO_NCAP.png?raw=true)
+![plot](./Front-Crash-Management-System/EURO_NCAP.png?raw=true)
